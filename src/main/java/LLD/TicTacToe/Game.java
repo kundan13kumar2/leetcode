@@ -49,7 +49,7 @@ public class Game {
             }
             playerList.addLast(turnPlayer);
 
-            boolean winner = isThereWinner(inputRow, inputColumn, turnPlayer.getSymbolC());
+            boolean winner = false;// isThereWinner(inputRow, inputColumn, turnPlayer.getSymbolC());
             if (winner) {
                 return turnPlayer.getName();
             }
