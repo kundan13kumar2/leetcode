@@ -35,7 +35,8 @@ public class Game {
             }
             System.out.print("Player:" + turnPlayer.getName() + " Enter row,column: ");
             Scanner inputScanner = new Scanner(System.in);
-            String s = inputScanner.nextLine();
+            String s = null;
+            System.out.println(s.split(",").length);
             String[] values = s.split(",");
             int inputRow = Integer.parseInt(values[0]);
             int inputColumn = Integer.parseInt(values[1]);
