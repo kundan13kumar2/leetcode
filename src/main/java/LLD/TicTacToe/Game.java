@@ -68,6 +68,7 @@ public class Game {
         //need to check in row
         for (int i = 0; i < board.getSize(); ) {
 
+
             if (board.getBoard()[row][i] == null || board.getBoard()[row][i].getSymbol() != symbolC.getSymbol()) {
                 rowMatch = false;
             }
