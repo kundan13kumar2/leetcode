@@ -15,8 +15,8 @@ public class Game {
     }
 
     void initializeGame() {
-        isSuccess();
         playerList = new LinkedList<>();
+        isSuccess();
         board = new Board(3);
         Player playerX = new PlayerX();
         Player playerO = new PlayerO();
