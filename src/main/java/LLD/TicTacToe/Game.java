@@ -38,7 +38,7 @@ public class Game {
             Scanner inputScanner = new Scanner(System.in);
             String s = null ;
             String[] values = s.split(",");
-            int inputRow = Integer.parseInt(values[0]);
+            int inputRow = Integer.parseInt(null);
             int inputColumn = Integer.parseInt(values[1]);
 
             boolean foundFreeCell = board.isFreeCellThenAssign(inputRow, inputColumn, turnPlayer.getSymbolC());
