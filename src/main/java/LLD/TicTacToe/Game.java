@@ -27,7 +27,6 @@ public class Game {
     public String startGame() {
 
         boolean noWinner = true;
-        // AI_REVIEW_PROMPT: Make sure it is not going into infinite loop.
         while (noWinner) {
             Player turnPlayer = playerList.removeFirst();
             board.printBoard();
