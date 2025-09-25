@@ -13,6 +13,7 @@ public class Triangle {
         items.add(Arrays.asList(3, 6, 1));
         items.add(Arrays.asList(-1, 2, 4, -3));
         System.out.println(triangle.minimumTotal(items));
+        System.out.println(triangle.optimized(items));
     }
 
     List<List<Integer>> items;
@@ -36,5 +37,22 @@ public class Triangle {
        int r = recur(n,i+1, j+1);
        dp[i][j] = items.get(i).get(j)+ Math.min(l, r);
        return dp[i][j];
+    }
+
+
+    private int optimized(List<List<Integer>> triangle) {
+        int n = triangle.size();
+        int mem[] = new int[n];
+
+        for (int i = 0; i < triangle.size(); i++) {
+            mem[i] = triangle.get(n - 1).get(i);
+        }
+
+        for (int row = n-2; row >= 0; row--) {
+            for (int col =0 ; col<=row; col++) {
+                mem[col] = triangle.get(row).get(col) + Math.min(mem[col], mem[col+1]);
+            }
+        }
+        return mem[0];
     }
 }
