@@ -13,6 +13,8 @@ public class TaskManager {
         list1.add(28);
         list1.add(30);
 
+        list1.sort(Collections.reverseOrder());
+
 //        List<Integer> list2 = new ArrayList<>();
 //        list2.add(2);
 //        list2.add(102);
